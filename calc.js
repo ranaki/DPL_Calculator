@@ -4,19 +4,14 @@
 //display the result
 console.log("loading");
 
-
+var currentEquation = '';
 
 function calcResult() {
     var num1 = Number(document.getElementById("myInput1").value);
     var num2 = Number(document.getElementById("myInput2").value);
     var operator = document.getElementById("myOperator").value;
 
-    console.log("num1 = " + num1);
-    console.log("num2 = " + num2);
-    console.log("opeerator = " + operator);
-    // console.log("calculate this");
     var resultLab = document.getElementById("calc-result");
-    // console.log("resultLab " + resultLab )
     
     if (num2 === 0 && operator === '/')
     {
@@ -24,20 +19,25 @@ function calcResult() {
     }
     switch(operator) {
     case '+':
+        currentEquation = `Equation is: ${num1} + ${num2}`;
         result = num1 + num2;
         break;
     case '-':
+        currentEquation = `Equation is: ${num1} - ${num2}`;
         result = num1 - num2;
         break;
     case '*':
+        currentEquation = `Equation is: ${num1} * ${num2}`;
         result = num1 * num2;
         break;
     case '/':
+        currentEquation = `Equation is: ${num1} / ${num2}`;
         result = num1 / num2;
         break;
     default:
         result = 'Not a valid operator';
     }
+    console.log(currentEquation);
 
     resultLab.innerHTML = "Result = " + result;
 }
