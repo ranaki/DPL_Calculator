@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="container calc-header">
+        <h3>DPL Calculator</h3>
+    </header>
+    <section class="container calc-box">
+        <div class="grid">
+            <form>
+                <fieldset>
+                    <label>First Number
+                        <input type="text" id="myInput1" value="10">
+                    </label>
+                    <label>Input Operator
+                        <!--<input type="text" id="myOperator" value="+">-->
+                    </label>
+                    <select class="calc-select-operator" id="myOperator">
+                        <option value="+"> + </option>
+                        <option value="-"> - </option>
+                        <option value="*"> * </option>
+                        <option value="/"> / </option>
+                    </select>
+                    <label>Second Number
+                        <input type="text" id="myInput2" value="20">
+                    </label>
+                    <input id="calc-button" onclick="calcResult()" type="button" value="Calculate">
+                </fieldset>
+            </form>
+            <label id="calc-result" >Results = 0</label>
+        </div>
+    </section>
+    <script src="calc.js"></script>
+    <footer class="calc-footer">
+        <small>&copy; Rick Baker Labs</small>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,146 @@
+
+/* http://meyerweb.com/eric/tools/css/reset/ 2. v2.0 | 20110126
+  License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/*
+  ========================================
+  Custom styles
+  ========================================
+*/
+body {
+  background: #0f2342;
+  font: 300 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /*font-weight: 300; 
+  font-size: 16px;
+  line-height: 22px;
+  font-family: "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+}
+
+/*
+  ========================================
+  Grid
+  ========================================
+*/
+.container {
+    margin: 0 auto;
+    width: 300px;
+}
+
+
+/*
+  ========================================
+  Borders
+  ========================================
+*/
+.calc-box {
+    border: 1px;
+    border-radius: 10px;
+    border-color: white;
+    border-style: solid;
+    background-color: #42649b;
+    color: white;
+    /*text-align: center;*/
+}
+
+/*
+  ========================================
+  Header/Footer
+  ========================================
+*/
+.calc-header {
+    margin: 40px auto 20px auto;
+    text-align: center;
+    font-size: 30px;
+    color: ghostwhite;
+}
+.calc-footer {
+    margin: 40px auto 20px auto;
+    text-align: center;
+    color: silver;
+    /*font-size: 10px;*/
+}
+/*
+  ========================================
+  Input/Labels
+  ========================================
+*/
+input, label {
+    display: inline-block;
+    /*text-align: center;*/
+    /*width: 60px;*/
+}
+
+label {
+    margin: 15px auto 10px auto;
+    /*width: 200px;*/
+}
+input {
+    font-size: 18px;
+    margin: 5px auto 10px auto;
+}
+.calc-select-operator {
+    font-size: 18px;
+}
+#calc-button {
+    /*margin-top: 10px auto 20px auto;;*/
+    font-size: 18px;
+    background-color: palegreen;
+    border-radius: 5px;
+}
+
+/*
+  ========================================
+  Grid
+  ========================================
+*/
+
+.grid {
+    margin: 20px auto;
+    width: 200px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
