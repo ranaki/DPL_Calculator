@@ -4,13 +4,13 @@
 //display the result
 console.log("loading");
 
-var currentEquation = '';
+var currentEquationHistory = [];
 
 function calcResult() {
+    var currentEquation = "";
     var num1 = Number(document.getElementById("myInput1").value);
     var num2 = Number(document.getElementById("myInput2").value);
     var operator = document.getElementById("myOperator").value;
-
     var resultLab = document.getElementById("calc-result");
     
     if (num2 === 0 && operator === '/')
@@ -19,25 +19,29 @@ function calcResult() {
     }
     switch(operator) {
     case '+':
-        currentEquation = `Equation is: ${num1} + ${num2}`;
+        currentEquation = `${num1} + ${num2}`;
         result = num1 + num2;
         break;
     case '-':
-        currentEquation = `Equation is: ${num1} - ${num2}`;
+        currentEquation = `${num1} - ${num2}`;
         result = num1 - num2;
         break;
     case '*':
-        currentEquation = `Equation is: ${num1} * ${num2}`;
+        currentEquation = `${num1} * ${num2}`;
         result = num1 * num2;
         break;
     case '/':
-        currentEquation = `Equation is: ${num1} / ${num2}`;
+        currentEquation = `${num1} / ${num2}`;
         result = num1 / num2;
         break;
     default:
         result = 'Not a valid operator';
     }
-    console.log(currentEquation);
+    console.log("Current: " + currentEquation + " = " + result);
+    currentEquationHistory.push(currentEquation);
 
     resultLab.innerHTML = "Result = " + result;
+
+    console.log("History: " + currentEquationHistory + " = " + result);
 }
+
