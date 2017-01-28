@@ -12,6 +12,10 @@ function calcResult() {
     var num2 = Number(document.getElementById("myInput2").value);
     var operator = document.getElementById("myOperator").value;
     var resultLab = document.getElementById("calc-result");
+
+    // if (num1 === 0 || num2 === 0){
+    //     return resultLab.innerHTML = "Please enter a numeric value for each input";
+    // }
     
     if (num2 === 0 && operator === '/')
     {
@@ -43,5 +47,18 @@ function calcResult() {
     resultLab.innerHTML = "Result = " + result;
 
     console.log("History: " + currentEquationHistory + " = " + result);
+
+    addToHistoryList(currentEquation + " = " + result);
 }
 
+function addToHistoryList(expression){
+    var histList = document.getElementById("hist-list-id");
+    var li = document.createElement("li");
+    li.innerHTML = expression;
+    histList.appendChild(li);
+}
+
+function clearInput(inputId){
+    document.getElementById(inputId).value = '';
+    // document.getElementById("myInput2").value = '';
+}

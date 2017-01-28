@@ -13,9 +13,9 @@
             <form>
                 <fieldset>
                     <label>First Number
-                        <input type="text" id="myInput1" value="10">
+                        <input type="number" id="myInput1" value="" required onclick="clearInput('myInput1')">
                     </label>
-                    <label>Input Operator
+                    <label>Operator
                         <!--<input type="text" id="myOperator" value="+">-->
                     </label>
                     <select class="calc-select-operator" id="myOperator">
@@ -25,7 +25,7 @@
                         <option value="/"> / </option>
                     </select>
                     <label>Second Number
-                        <input type="text" id="myInput2" value="20">
+                        <input type="number" id="myInput2" value="" required onclick="clearInput('myInput2')">
                     </label>
                     <input id="calc-button" onclick="calcResult()" type="button" value="Calculate">
                 </fieldset>
@@ -33,9 +33,17 @@
             <label id="calc-result" >Results = 0</label>
         </div>
     </section>
-    <script src="calc.js"></script>
+    <section class="container hist-box">
+        <div class="grid">
+            <h4>Calculation History</h4>
+            <ul class="hist-list" id="hist-list-id">
+            </ul>
+        </div>
+    </section>
+   
     <footer class="calc-footer">
         <small>&copy; Rick Baker Labs</small>
     </footer>
+    <script src="calc.js"></script>
 </body>
 </html>

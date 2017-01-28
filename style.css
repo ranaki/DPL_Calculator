@@ -59,7 +59,10 @@ body {
   line-height: 22px;
   font-family: "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
 }
+h4 {
+  text-align: center;
 
+}
 /*
   ========================================
   Grid
@@ -83,6 +86,16 @@ body {
     border-style: solid;
     background-color: #42649b;
     color: white;
+    /*text-align: center;*/
+}
+.hist-box {
+    border: 1px;
+    border-radius: 10px;
+    border-color: white;
+    border-style: solid;
+    background-color: #42649b;
+    color: white;
+    margin: 10px auto;
     /*text-align: center;*/
 }
 
@@ -143,4 +156,13 @@ input {
     width: 200px;
     padding-left: 15px;
     padding-right: 15px;
+}
+
+/*
+  ========================================
+  History List
+  ========================================
+*/
+.hist-list {
+  margin: 20px auto;
 }
